@@ -1,4 +1,4 @@
-# Correlation and regression for data analysis
+# Ex:03 Correlation and regression for data analysis
 # Aim : 
 
 To analyse given data using coeffificient of correlation and regression line
@@ -38,12 +38,14 @@ for i in range(N):
     Sxy += x[i] * y[i]
     Sx2 += x[i] ** 2
     Sy2 += y[i] ** 2
-r = (N * Sxy - Sx * Sy) / (math.sqrt(N * Sx2 - Sx ** 2) * math.sqrt(N * Sy2 - Sy ** 2))
+r = (N * Sxy - Sx * Sy) / (math.sqrt(N * Sx2 - Sx ** 2) * math.sqrt
+                                        (N * Sy2 - Sy ** 2))
 print("The Correlation coefficient is %0.3f" % r)
 byx = (N * Sxy - Sx * Sy) / (N * Sx2 - Sx ** 2)
 xmean = Sx / N
 ymean = Sy / N
-print("The Regression Line Y on X is ::: y = %0.3f + %0.3f (x - %0.3f)" % (ymean, byx, xmean))
+print("The Regression Line Y on X is ::: y = %0.3f + %0.3f
+                            (x - %0.3f)" % (ymean, byx, xmean))
 plt.scatter(x, y)
 def Reg(x):
     return ymean + byx * (x - xmean)
